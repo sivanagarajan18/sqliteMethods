@@ -4,7 +4,7 @@
 
 A type-safe, [Swift][]-language layer over [SQLite3][].
 
-[sqliteClasses][] provides compile-time confidence in SQL statement
+[sqliteMethods][] provides compile-time confidence in SQL statement
 syntax _and_ intent.
 
 ## Features
@@ -181,7 +181,7 @@ sqliteClasses with CocoaPods:
     use_frameworks!
 
     target 'YourAppTargetName' do
-        pod 'sqliteClasses'
+        pod 'sqliteMethods'
     end
     ```
 
@@ -199,7 +199,7 @@ Swift code.
 
   ```swift
   dependencies: [
-      .package(url: "https://github.com/sivanagarajan18/sqliteClasses.git", from: "1.0.1")
+      .package(url: "https://github.com/sivanagarajan18/sqliteMethods.git", from: "0.0.1")
   ]
   ```
 
@@ -223,7 +223,7 @@ To install sqliteClasses as an Xcode sub-project:
  2. In your target’s **General** tab, click the **+** button under **Linked
     Frameworks and Libraries**.
 
- 3. Select the appropriate **sqliteClasses** for your platform.
+ 3. Select the appropriate **sqliteMethods** for your platform.
 
  4. **Add**.
 
@@ -233,7 +233,7 @@ device:
  5. In the **General** tab, click the **+** button under **Embedded
     Binaries**.
 
- 6. Select the appropriate **sqliteClasses.framework** for your platform.
+ 6. Select the appropriate **sqliteMethods.framework** for your platform.
 
  7. **Add**.
 
@@ -263,12 +263,12 @@ device:
 
 ## Author
 
- - [Osoftz(mailto:sivanagarajan18@gmail.com)
+ - [Siva(mailto:sivanagarajan18@gmail.com)
 
 
 ## License
 
-sqliteClasses is available under the MIT license. See [the LICENSE
+sqliteMethods is available under the MIT license. See [the LICENSE
 file](./LICENSE.txt) for more information.
 
 ## Related
@@ -292,21 +292,21 @@ Looking for something else? Try another Swift wrapper (or [FMDB][]):
 
 [Swift]: https://swift.org/
 [SQLite3]: http://www.sqlite.org
-[sqliteClasses]: https://github.com/sivanagarajan18/sqliteClasses
+[sqliteMethods]: https://github.com/sivanagarajan18/sqliteMethods
 
-[TravisBadge]: https://img.shields.io/travis/sivanagarajan18/sqliteClasses.svg?branch=master
+[TravisBadge]: https://img.shields.io/travis/sivanagarajan18/sqliteMethods.svg?branch=master
 [TravisLink]: https://travis-ci.org/
 
-[CocoaPodsVersionBadge]: https://cocoapod-badges.herokuapp.com/v/sqliteClasses/badge.png
-[CocoaPodsVersionLink]: http://cocoadocs.org/docsets/sqliteClasses
+[CocoaPodsVersionBadge]: https://cocoapod-badges.herokuapp.com/v/sqliteMethods/badge.png
+[CocoaPodsVersionLink]: http://cocoadocs.org/docsets/sqliteMethods
 
 [PlatformBadge]: https://cocoapod-badges.herokuapp.com/p/sqliteClasses/badge.png
-[PlatformLink]: http://cocoadocs.org/docsets/sqliteClasses
+[PlatformLink]: http://cocoadocs.org/docsets/sqliteMethods
 
 [CartagheBadge]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
 [CarthageLink]: https://github.com/Carthage/Carthage
 
-[GitterBadge]: https://gitter.im/Siva_sqliteClasses
+[GitterBadge]: https://gitter.im/Siva_sqliteMethods
 [GitterLink]: https://gitter.im/osoftz_iOS
 
 [Swift4Badge]: https://img.shields.io/badge/swift-4.1-orange.svg?style=flat
