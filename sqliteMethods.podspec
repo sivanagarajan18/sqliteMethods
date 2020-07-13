@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = {:git =>'https://github.com/sivanagarajan18/sqliteClasses',  :branch => "master"}
+  s.source       = {:git =>'https://github.com/sivanagarajan18/sqliteMethods.git',  :branch => "master"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -93,7 +93,7 @@ Pod::Spec.new do |s|
   #
   
 	s.swift_version = '4.2'
-  s.source_files  = "sqliteClasees","Classes/**/*.swift"
+  s.source_files  = "sqliteMethods","Classes/**/*.swift"
   s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
