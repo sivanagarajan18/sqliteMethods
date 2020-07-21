@@ -312,28 +312,36 @@ public func selectTable(DB:Connection, tableName:String,column:Column)->(value:[
     }
 }
 
-public func deleteRow(DB:Connection, tableName:String,column:Column) -> (success: Bool,error: Error?){
+public func deleteRow(DB:Connection, tableName:String,column:Column, andColumn: Column? = nil) -> (success: Bool,error: Error?){
    let tab = Table(tableName)
     var filter_table : Table!
     do{
         switch column.dT {
         case 0 :
-            filter_table = tab.filter(Expression<Int>(column.CName) == Int(column.Value)!)
-            
+            if andColumn != nil {
+                filter_table = tab.filter(Expression<Int>(column.CName) == Int(column.Value)! && Expression<Int>(andColumn!.CName) == Int(andColumn!.Value)!)
+            } else {
+                filter_table = tab.filter(Expression<Int>(column.CName) == Int(column.Value)!)
+            }
         case 1 :
-            filter_table = tab.filter(Expression<Date>(column.CName) == dateFormatter(stringDate: column.Value, format: "MM/dd/yyyy"))
-            
+            if andColumn != nil {
+                filter_table = tab.filter(Expression<Date>(column.CName) == dateFormatter(stringDate: column.Value, format: "MM/dd/yyyy") && Expression<Date>(andColumn!.CName) == dateFormatter(stringDate: andColumn!.Value, format: "MM/dd/yyyy"))
+            } else {
+                filter_table = tab.filter(Expression<Date>(column.CName) == dateFormatter(stringDate: column.Value, format: "MM/dd/yyyy"))
+            }
         case 2 :
-            filter_table = tab.filter(Expression<String>(column.CName) == column.Value)
-            
+            if andColumn != nil {
+                filter_table = tab.filter(Expression<String>(column.CName) == column.Value && Expression<String>(andColumn!.CName) == andColumn!.Value)
+            } else {
+                filter_table = tab.filter(Expression<String>(column.CName) == column.Value)
+            }
         default: break
         }
-        
         let xx = filter_table.delete()
-        
+
         try DB.run(xx)
         return (true,nil)
-        
+
     }catch{
         print(error)
         return (false,error)
