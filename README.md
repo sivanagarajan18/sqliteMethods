@@ -199,7 +199,7 @@ Swift code.
 
   ```swift
   dependencies: [
-      .package(url: "https://github.com/sivanagarajan18/sqliteMethods.git", from: "0.0.1")
+      .package(url: "https://github.com/sivanagarajan18/sqliteMethods.git", from: "0.0.3")
   ]
   ```
 
