@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "sqliteMethods"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Framework to utilize the SQLite with simple methods"
 
   # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 	sqliteClass to utilize the SQLite with simple methods
 		DESC
 
-  s.homepage     = "http://wissend.com"
+  s.homepage     = "https://github.com/sivanagarajan18/sqliteMethods.git"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
